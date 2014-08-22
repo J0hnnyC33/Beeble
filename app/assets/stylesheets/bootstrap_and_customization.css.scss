@@ -1,0 +1,19 @@
+@import url('http://fonts.googleapis.com/css?family=Asap|Muli|Fjalla+One|Play|Audiowide|Playfair+Display+SC|Satisfy' rel='stylesheet' type='text/css');
+
+$body-bg: #D0D0D0;
+$font-family-base: Muli;
+$navbar-default-bg: black;
+$navbar-default-brand-font-family: Helvetica;
+$navbar-default-brand-hover-bg: white;
+$navbar-default-link-font-family: Helvetica;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-bg: white;
+$navbar-border-radius: 0;
+$btn-primary-bg: green;
+
+
+@import 'bootstrap';
+
+.center {
+	text-align: center;
+}

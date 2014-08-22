@@ -1,0 +1,10 @@
+<link href='http://fonts.googleapis.com/css?family=Asap|Muli|Fjalla+One|Play|Audiowide|Playfair+Display+SC|Satisfy' rel='stylesheet' type='text/css'>
+
+<div class="jumbotron center">
+	<% if user_signed_in? %>
+		#do something
+	<% else %>
+		<h1 font-family='Muli'>Welcome to Shmeebler</h1>
+		<p><%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+	<% end %>
+</div>
