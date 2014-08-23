@@ -1,7 +1,6 @@
 class GoobsController < ApplicationController
   before_action :set_goob, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @goobs = Goob.all
   end
@@ -34,13 +33,11 @@ class GoobsController < ApplicationController
       else
         render action: 'edit'
       end
-    end
   end
 
   def destroy
     @goob.destroy
     redirect_to goobs_url
-    end
   end
 
   private
