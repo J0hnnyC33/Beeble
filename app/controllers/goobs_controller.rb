@@ -18,13 +18,12 @@ class GoobsController < ApplicationController
   def create
     @goob = Goob.new(goob_params)
 
-    respond_to do |format|
       if @goob.save
         redirect_to @goob, notice: 'Goob was successfully created.'
       else
         render action: 'new'
-      end
-    end
+      end	
+
   end
 
   def update
