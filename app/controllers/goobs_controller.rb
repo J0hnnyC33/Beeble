@@ -1,6 +1,8 @@
 class GoobsController < ApplicationController
   before_action :set_goob, only: [:show, :edit, :update, :destroy]
-
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @goobs = Goob.all
   end
@@ -9,21 +11,20 @@ class GoobsController < ApplicationController
   end
 
   def new
-    @goob = Goob.new
+    @goob = current_user.goobs.build
   end
 
   def edit
   end
 
   def create
-    @goob = Goob.new(goob_params)
+    @goob = current_user.goobs.build(goob_params)
 
       if @goob.save
         redirect_to @goob, notice: 'Goob was successfully created.'
       else
         render action: 'new'
       end	
-
   end
 
   def update
@@ -43,6 +44,11 @@ class GoobsController < ApplicationController
 
     def set_goob
       @goob = Goob.find(params[:id])
+    end
+    
+    def correct_user
+      @goob = current_user.goobs.find_by(params[:id])
+      redirect_to goobs_path, notice: "Get Chya Weight Up Son!!!" if @goob.nil?
     end
 
     def goob_params
