@@ -52,6 +52,6 @@ class GoobsController < ApplicationController
     end
 
     def goob_params
-      params.require(:goob).permit(:description)
+      params.require(:goob).permit(:description, :image)
     end
 end
