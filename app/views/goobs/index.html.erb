@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Description</th>
       <th>User</th>
       <th colspan="3"></th>
@@ -12,6 +13,7 @@
   <tbody>
     <% @goobs.each do |goob| %>
       <tr>
+        <td><%= image_tag goob.image.url(:medium) %></td>
         <td><%= goob.description %></td>
         <td><%= goob.user.email if goob.user %></td>
         <td><%= link_to 'Show', goob_path(goob) %></td>
