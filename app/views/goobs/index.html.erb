@@ -1,14 +1,16 @@
-<div id="goobs">
+<div id="goobs" class="transitions-enabled">
 	<% @goobs.each do |goob| %>
-	  <div class="box">
+	  <div class="box panel panel-default">
 		<%= image_tag goob.image.url(:medium) %>
-		<%= goob.description %>
-		<%= goob.user.email if goob.user %>
-		<%= link_to 'Show', goob_path(goob) %>
-	  <% if goob.user == current_user %>
-		<%= link_to 'Edit', edit_goob_path(goob) %>
-		<%= link_to 'Destroy', goob, method: :delete, data: { confirm: 'Are you sure?' } %>
-	  <% end %>
+		<div class="panel-body"?
+			<%= goob.description %>
+			<%= goob.user.email if goob.user %>
+			<%= link_to 'Show', goob_path(goob) %>
+		  <% if goob.user == current_user %>
+			<%= link_to 'Edit', edit_goob_path(goob) %>
+			<%= link_to 'Destroy', goob, method: :delete, data: { confirm: 'Are you sure?' } %>
+		  <% end %>
+		</div>
 	  </div>
 	<% end %>
 </div>
