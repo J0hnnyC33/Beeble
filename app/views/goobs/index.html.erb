@@ -2,7 +2,7 @@
 	<% @goobs.each do |goob| %>
 	  <div class="box panel panel-default">
 		<%= image_tag goob.image.url(:medium) %>
-		<div class="panel-body"?
+		<div class="panel-body">
 			<%= goob.description %>
 			<%= goob.user.email if goob.user %>
 			<%= link_to 'Show', goob_path(goob) %>
