@@ -7,10 +7,6 @@ class PagesController < ApplicationController
   	
   end
   
-  def discover
-  	
-  end
-  
   def create
   	
   end
