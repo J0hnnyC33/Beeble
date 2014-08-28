@@ -11,8 +11,8 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.3.0.rc2'
-gem 'paperclip', '~> 4.1'
 gem 'aws-sdk', '~> 1.20.0'
+gem 'paperclip', '~> 4.1'
 gem 'masonry-rails', '~> 0.2.0'
 
 
