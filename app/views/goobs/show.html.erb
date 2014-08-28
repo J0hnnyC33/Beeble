@@ -2,16 +2,16 @@
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading center">
-        <%= image_tag @pin.image.url(:medium) %>
+        <%= image_tag @goob.image.url(:medium) %>
       </div>
       <div class="panel-body">
-        <p><%= @pin.description %></p>
-        <p><strong><%= @pin.user.email if @pin.user %></strong></p>
+        <p><%= @goob.description %></p>
+        <p><strong><%= @goob.user.email if @goob.user %></strong></p>
 
-        <% if @pin.user == current_user %>
-         <%= link_to 'Edit', edit_pin_path(@pin) %>
+        <% if @goob.user == current_user %>
+         <%= link_to 'Edit', edit_goob_path(@goob) %>
         <% end %>
-        | <%= link_to 'Back', pins_path %>
+        | <%= link_to 'Back', goobs_path %>
 
       </div>
     </div>
