@@ -1,3 +1,5 @@
+<%= render 'pages/home' unless user_signed_in? %>
+
 <div id="goobs" class="transitions-enabled">
   <% @goobs.each do |goob| %>
     <div class="box panel panel-default">
