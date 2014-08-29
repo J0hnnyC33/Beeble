@@ -15,6 +15,10 @@
  *= require 'masonry/transitions'
  */
 
+h1 {
+	letter-spacing: -1px;
+}
+
 .padded{
 	padding: 10px;
 }
