@@ -2,9 +2,9 @@ class GoobsController < ApplicationController
   before_action :set_goob, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  
+
   def index
-    @goobs = Goob.all
+    @goobs = Goob.all.reverse
   end
 
   def show
@@ -24,7 +24,7 @@ class GoobsController < ApplicationController
         redirect_to @goob, notice: 'Goob was successfully created.'
       else
         render action: 'new'
-      end	
+      end
   end
 
   def update
@@ -45,7 +45,7 @@ class GoobsController < ApplicationController
     def set_goob
       @goob = Goob.find(params[:id])
     end
-    
+
     def correct_user
       @goob = current_user.goobs.find_by(params[:id])
       redirect_to goobs_path, notice: "Get Chya Weight Up Son!!!" if @goob.nil?
