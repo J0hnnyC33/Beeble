@@ -18,4 +18,6 @@
   <% end %>
 </div>
 
-<%= will_paginate @goobs %>
+<div class="center">
+  <%= will_paginate @goobs, renderer: BootstrapPagination::Rails %>
+</div>
